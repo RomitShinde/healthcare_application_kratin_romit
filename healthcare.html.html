@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kratins Healthcare App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <style>
+    /* Custom CSS styles */
+      
+    
+    body {
+      padding: 20px;
+       background-image:url('https://rb.gy/f68pn');
+      background-size: cover;
+      background-position: center;
+      
+       
+    }
+    .dashboard-heading {
+      margin-bottom: 30px;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+    .health-info {
+      display: none;
+    }
+  </style>
+  <script>
+    function showContent(option) {
+      var content = document.getElementById(option);
+      var otherOptions = document.getElementsByClassName("health-info");
+      for (var i = 0; i < otherOptions.length; i++) {
+        otherOptions[i].style.display = "none";
+      }
+      content.style.display = "block";
+    }
+  
+  </script>
+  
+  
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Kratins Healthcare App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            User
+          </a>
+          <div class="dropdown-menu" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="#">Profile</a>
+            <a class="dropdown-item" href="#">Settings</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#profileModal">Set/Edit Profile</a> 
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="healthcareDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Healthcare Options
+          </a>
+          <div class="dropdown-menu" aria-labelledby="healthcareDropdown">
+            <a class="dropdown-item" href="#" onclick="showContent('consultations')">Consultations</a>
+            <a class="dropdown-item" href="#" onclick="showContent('medical-info')">Medical Information</a>
+            <a class="dropdown-item" href="#" onclick="showContent('health-tips')">Health Tips</a>
+            <a class="dropdown-item" href="#" onclick="showContent('fitness-program')">Fitness Programs</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Health Records</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+ 
+
+    <div id="consultations" class="health-info">
+      <h2>Consultations</h2>
+      <p>Consultations provide personalized medical advice and guidance from healthcare professionals.</p>
+      <ul>
+        <li>Consultation 1: Schedule an appointment with a general physician for a comprehensive health checkup.</li>
+        <li>Consultation 2: Book an appointment with a specialist for a specific health concern, such as cardiology or orthopedics.</li>
+        <li>Consultation 3: Seek advice from a nutritionist for dietary recommendations and meal planning.</li>
+      </ul>
+    </div>
+
+    <div id="medical-info" class="health-info">
+      <h2>Medical Information</h2>
+      <p>Access valuable medical information to stay informed about various health conditions and treatments.</p>
+      <ul>
+        <li>Medical Information 1: Learn about common diseases and their symptoms, causes, and preventive measures.</li>
+        <li>Medical Information 2: Understand different treatment options available for specific medical conditions.</li>
+        <li>Medical Information 3: Stay updated with the latest medical research and breakthroughs in healthcare.</li>
+      </ul>
+    </div>
+
+    <div id="health-tips" class="health-info">
+      <h2>Health Tips</h2>
+      <p>Discover useful health tips and practices to maintain a healthy lifestyle and prevent illness.</p>
+      <ul>
+        <li>Health Tip 1: Incorporate regular physical activity into your daily routine, such as walking or yoga.</li>
+        <li>Health Tip 2: Follow a balanced diet rich in fruits, vegetables, whole grains, and lean proteins.</li>
+        <li>Health Tip 3: Get enough sleep and practice stress management techniques, such as meditation or deep breathing exercises.</li>
+      </ul>
+    </div>
+
+    <div id="fitness-program" class="health-info">
+      <h2>Fitness Programs</h2>
+      <p>Explore fitness programs tailored to different age groups and fitness levels to improve overall health and well-being.</p>
+      <ul>
+        <li>Fitness Program 1: Join a group exercise class, such as aerobics or Zumba, to stay active and have fun.</li>
+        <li>Fitness Program 2: Engage in strength training exercises to build muscle mass and improve bone density.</li>
+        <li>Fitness Program 3: Try low-impact activities like swimming or cycling for cardiovascular fitness without stressing the joints.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <h1 class="dashboard-heading">We provide Healthy solutions and guidance for 65+ Age group People</h1>
+    <button type="submit" class="btn btn-primary">Enroll Now</button><br></br>
+
+    <!-- Login form -->
+    <div class="card">
+      <div class="card-header">
+        <h3>Login</h3>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="loginEmail">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Signup form -->
+    <div class="card">
+      <div class="card-header">
+        <h3>Sign Up</h3>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="signupName">Name</label>
+            <input type="text" class="form-control" id="signupName" placeholder="Enter name">
+          </div>
+          <div class="form-group">
+            <label for="signupEmail">Email address</label>
+            <input type="email" class="form-control" id="signupEmail" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <input type="password" class="form-control" id="signupPassword" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    
+  </div>
+  
+ <section class="health-section">
+  <div class="container">
+     <h1 class="dashboard-heading">Therapies we provide</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="health-item">
+          <img src="https://rb.gy/thza3" alt="Naturopathy">
+          <div class="overlay">
+            <h3>Naturopathy</h3>
+            <p>Naturopathy is a holistic approach to wellness that focuses on the body's ability to heal itself through natural therapies and lifestyle modifications.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="health-item">
+          <img src="https://www.kratinwellness.com/images/panchakarma.jpg" alt="Panchakarma">
+          <div class="overlay">
+            <h3>Panchakarma</h3>
+            <p>Panchakarma is an Ayurvedic detoxification and rejuvenation treatment that aims to balance the body, mind, and spirit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="health-item">
+          <img src="https://rb.gy/rfur9" alt="Yoga">
+          <div class="overlay">
+            <h3>Yoga</h3>
+            <p>Yoga is a mind-body practice that combines physical postures, breathing exercises, and meditation to promote overall well-being and improve flexibility, strength, and balance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="health-item">
+          <img src="https://rb.gy/8ime2" alt="Physiotherapy">
+          <div class="overlay">
+            <h3>Physiotherapy</h3>
+            <p>Physiotherapy involves the assessment, diagnosis, and treatment of physical conditions and injuries through manual therapy, exercise, and other techniques to improve mobility, function, and overall quality of life.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="health-item">
+          <img src="https://www.kratinwellness.com/images/acupressure.jpg" alt="Health Checkup">
+          <div class="overlay">
+            <h3>Accupressure and Accupuncture</h3>
+            <p>Acupressure and Acupuncture are two therapies based in the practice of traditional Chinese medicine. They both believe that symptoms and diseases in the body are caused by an imbalance or blockage of energy flow in the body. These techniques aim to restore the flow of energy to improve health and well being by applying pressure to specific points on the body to relax trapped nerves and release blockages.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Demo of Patient Information and health tips provided by kratin</h3>
+          </div>
+          <div class="card-body">
+            <p>Name: Sunita Sharma</p>
+            <p>Age: 65</p>
+            <p>Gender: Female</p>
+            <p>Address: 501,Montvert,Wakad,Pune</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Health Tips</h3>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Tip 1: Engage in regular physical activity to stay active and improve cardiovascular health.</li>
+              <li>Tip 2: Eat a balanced diet rich in fruits, vegetables, whole grains, and lean proteins for overall well-being.</li>
+              <li>Tip 3: Practice relaxation techniques such as meditation or deep breathing to reduce stress levels.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Upcoming Appointments</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li>Appointment 1 - Monday, 10:00 AM</li>
+          <li>Appointment 2 - Tuesday, 2:30 PM</li>
+          <li>Appointment 3 - Wednesday, 11:45 AM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Notifications</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li>Notification 1 - Today, 3:00 PM</li>
+          <li>Notification 2 - Tomorrow, 9:30 AM</li>
+          <li>Notification 3 - Next Week, 12:15 PM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="testimonial-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Testimonials</h2>
+        <div class="testimonial-block">
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <p>Ever since I started using the Kratins Health App, my life has improved significantly. The app provides me with valuable health information, personalized recommendations, and easy access to healthcare professionals. It has helped me stay on track with my fitness goals and make informed decisions about my well-being.</p>
+              <div class="testimonial-author">
+                <img src="https://rb.gy/3so7f" alt="Sunita Sharma">
+                <div class="author-details">
+                  <h4>Sunita Sharma</h4>
+                  <span>Health App User</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more testimonial items as needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br></br>
+
+
+
+<section class="appointment-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Schedule your appointment</h2>
+        <div id="calendar"></div>
+        <button class="btn btn-primary book-now">Book Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+<br></br>
+
+
+<footer class="footer bg-dark mt-auto py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">About Us</a></li>
+          <li class="list-inline-item"><a href="#">Contact Us</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-inline text-right">
+          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="mb-0">Clinic Timings - Open All Days | 7:30 AM to 4:00 PM</p>
+        <p class="mb-0">Kratin Group. B2-First Floor, Plot No. 47,Harihar Nagar, Besa, Nagpur- 440037 India. | Landline: 0712-281291<br> Email: info@kratin.co.in</p>
+        <p class="mb-0">&copy; Copyright © 2023 All rights are reserved © 2019 Kratin Group</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
